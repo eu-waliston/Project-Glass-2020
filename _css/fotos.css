@@ -16,7 +16,8 @@ ul#album-fotos li {
     border: 5px solid rgb(255, 255, 255);
     background-color: white;
     box-shadow: 1px 1px 5px rgba(4, 165, 177, 0.4);
-    border-radius: 9%;
+    border-radius: 5%;
+    -webkit-transition: all .4s ease-in;
 }
 
 ul#album-fotos li span {
@@ -28,6 +29,10 @@ ul#album-fotos li span {
     line-height: 370px;
     padding: 5px;
     border-radius: 5%;
+}
+
+ul#album-fotos li:hover {
+    -webkit-transform: scale(1.5);
 }
 
 ul#album-fotos li:hover span {
@@ -99,3 +104,4 @@ ul#album-fotos li#foto06:hover {
     background-position: 0px 0px;
     background-size: 200px 200px;
 }
+
