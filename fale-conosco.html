@@ -44,7 +44,7 @@
 </header>
 
 
-            <form>
+            <form method="POST" id="fContato" action="mailto:goneisgone@hotmail.com">
                 <fieldset id="usuario">
                     <legend>Identificação do Usuário</legend>
                         <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo..."></p>
@@ -62,14 +62,40 @@
                     <legend>Endereço do Usuário</legend>
                         <p><label for="cRua">Logradouro:</label> <input type="text"  name="cRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av, Travessa..."></p>
                         <p><label for="cNum">Número:</label> <input type="number" name="tNum" id="cNum"  min="0" max="9999"></p>
-                        Estado:
-                        Cidade:
+                        <p><label for="tEst">Estado: </label>
+                            <select name="tEst" id="cEst">
+                                <optgroup label="Regiao Sudeste">
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="MG" selected> Minas Gerais</option>
+                                    <option value="SP">Sao Paulo</option>
+                                </optgroup>
+
+                                <optgroup label="Demais Localiades">
+                                    <option value="PR">Parana</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                </optgroup>
+                            </select></p>
+
+                        <p><label for="cCid">Cidade:</label>
+                        <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade..." list="cidades"></p>
+                        <datalist id="cidades">
+                            <option value="Rio de Janeiro"></option>
+                            <option value="Nova iguacu"></option>
+                            <option value="Niteroi"></option>
+                            <option value="Belforroxo"></option>
+                        </datalist>
                 </fieldset>
                 
-                <fieldset id="mensagem">
-                    <legend>Mensagem do Usuário</legend>
-                        Grau de Urgência:
-                        Mensagem:
+                <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+                    
+                        <p><label for="cUrg">Grau de Urgência:</label>
+                        Min<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Max
+                        </p>
+                        <p><label for="cMsg">Mensagem:</label>
+                        <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui a sua Mensagem..."></textarea>
+                        </p>
+
                 </fieldset>
                 
                 <fieldset id="pedido">
