@@ -37,7 +37,7 @@ a:hover {
 
 header#cabecalho img#icone {
     position: absolute;
-    left: 1040px;
+    left: 1200px;
     top: 70px;
 }
 
@@ -103,7 +103,7 @@ nav#menu ul {
     text-transform: uppercase;
     position: absolute;
     top: -20px;
-    left: 550px;
+    left: 730px;
 } 
 
 nav#menu li {
@@ -253,4 +253,7 @@ footer#rodape p {
     text-align: center;
     font-weight: bold;
 }
+
+
+
 
